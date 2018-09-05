@@ -1,0 +1,37 @@
+<div class="row">
+  <div class="col s6 offset-s3">
+    <div class="card">
+        <div class="col-s6">
+            <img src="/assets/img/badlogic.jpg" style="width: 250px;height:250px;" class="col s3">
+          </div>
+      <div class="col-lg" ><h2>Register here to participate in quiz</h2>
+      </div>
+      
+      <div class="card-content">
+          <form #registerForm="ngForm">
+            <div class="row">
+              <div class="input-field col s12">
+                <i class="mdi mdi-account prefix"></i>
+                <input type="text" name="Name"d #Name ngModel required>
+                <label>Name</label>
+              </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                  <i class="material-icons prefix">mail_outline</i>
+                  <input type="text"  name="Email" #Email ngModel required [pattern]="emailPattern">
+                  <label>Email</label>
+                </div>
+              </div>
+              <div class="row">
+                  <div class="input-field col s12">
+                    <button class="btn-large btm-submit" type="submit" [disabled]="!registerForm.valid">Start</button>
+                  </div>
+                </div>
+          </form>
+      </div>
+    </div>
+
+  </div>
+
+</div>
